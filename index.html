@@ -3,42 +3,28 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
-<meta name="theme-color" content="#10131a"/>
+<meta name="theme-color" content="#0f131a"/>
 <meta name="apple-mobile-web-app-capable" content="yes"/>
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
 <meta name="apple-mobile-web-app-title" content="OA Coach"/>
 <link rel="manifest" href="manifest.json"/>
 <title>WGU OA Coach</title>
 <style>
-:root{
-  --bg:#0b0d12;--panel:#141821;--panel2:#1b2230;--text:#f5f7fb;--muted:#9ca6b5;
-  --line:#2b3342;--accent:#7ee787;--gold:#f6c453;--danger:#ff7b72;--info:#79c0ff;
-}
-*{box-sizing:border-box}
-body{margin:0;background:linear-gradient(180deg,#090b0f,#0d1117 48%,#0a0d12);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;padding-bottom:96px}
-.wrap{max-width:820px;margin:0 auto;padding:18px}
-.top{display:flex;justify-content:space-between;align-items:center;margin-top:max(4px,env(safe-area-inset-top))}
-h1{font-size:31px;margin:4px 0 2px;letter-spacing:-1.1px}.sub{font-size:13px;color:var(--muted)}
-.card{margin-top:14px;padding:18px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.025))}
-.section{font-size:17px;font-weight:800;margin-bottom:10px}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.metric{padding:14px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.025)}.metric .k{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.7px}.metric .v{font-size:24px;font-weight:900;margin-top:4px}
-input,textarea,select{width:100%;border:1px solid var(--line);background:#0d1118;color:var(--text);border-radius:14px;padding:12px 13px;font-size:16px}textarea{min-height:110px;resize:vertical}
-label{display:block;font-size:12px;color:var(--muted);margin:10px 0 6px}
-button{cursor:pointer}.primary{width:100%;border:none;border-radius:15px;padding:13px 15px;background:var(--accent);color:#061006;font-weight:900;font-size:15px;margin-top:12px}.secondary{border:1px solid var(--line);background:#111722;color:var(--text);border-radius:13px;padding:10px 12px;font-weight:800}.danger{color:var(--danger)}
-.tabs{position:fixed;left:50%;transform:translateX(-50%);bottom:max(12px,env(safe-area-inset-bottom));width:min(94%,790px);display:grid;grid-template-columns:repeat(5,1fr);gap:4px;padding:7px;border:1px solid var(--line);border-radius:18px;background:rgba(15,18,24,.94);backdrop-filter:blur(18px);z-index:20}
-.tab{border:none;background:transparent;color:var(--muted);padding:8px 4px;border-radius:12px;font-weight:800;font-size:11px}.tab.active{background:#232a36;color:var(--text)}
-.page{display:none}.page.active{display:block}
-.progress{height:10px;border-radius:999px;background:#0a0d12;border:1px solid var(--line);overflow:hidden}.bar{height:100%;background:var(--accent)}
-.topic{margin-top:10px;padding:12px;border:1px solid var(--line);border-radius:15px}.topicrow{display:flex;justify-content:space-between;gap:12px;align-items:center}
-.badge{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:4px 8px;font-size:11px;color:var(--gold)}
-.qcard{padding:16px;border:1px solid var(--line);border-radius:18px;background:#10151d}.qtitle{font-size:18px;font-weight:800;line-height:1.35}.option{display:block;width:100%;text-align:left;margin-top:9px;padding:12px 13px;border-radius:14px;border:1px solid var(--line);background:#111722;color:var(--text);font-size:15px}.option.correct{border-color:#3d7f4b;background:#142219}.option.wrong{border-color:#8a3f46;background:#241519}
-.explain{margin-top:12px;padding:12px;border-left:3px solid var(--info);background:#101722;border-radius:8px;font-size:14px;line-height:1.45}
-.row{display:flex;gap:8px;flex-wrap:wrap}.row>*{flex:1}
-.small{font-size:12px;color:var(--muted)}.empty{text-align:center;color:var(--muted);padding:24px 8px}
-.listitem{padding:11px 0;border-bottom:1px solid var(--line)}.listitem:last-child{border-bottom:none}
-.toast{position:fixed;top:20px;left:50%;transform:translateX(-50%) translateY(-16px);opacity:0;transition:.2s;background:#142218;border:1px solid #2f6f3b;color:#ddffd9;padding:10px 14px;border-radius:999px;z-index:40;font-weight:800}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-@media(max-width:600px){.grid3{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr}.tabs{grid-template-columns:repeat(5,1fr)}}
+:root{--bg:#090c11;--panel:#141a23;--panel2:#1b2430;--text:#f5f7fb;--muted:#9ca7b5;--line:#2b3544;--accent:#88e083;--gold:#f5c451;--danger:#ff7b72;--info:#79c0ff}
+*{box-sizing:border-box} body{margin:0;background:linear-gradient(180deg,#080a0e,#0d1117 50%,#0a0d12);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;padding-bottom:100px}
+.wrap{max-width:860px;margin:0 auto;padding:18px}.top{display:flex;justify-content:space-between;align-items:center;margin-top:max(4px,env(safe-area-inset-top));gap:10px}h1{font-size:31px;margin:3px 0 2px;letter-spacing:-1.1px}.sub{font-size:12px;color:var(--muted)}
+.card{margin-top:14px;padding:18px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.022))}.section{font-size:17px;font-weight:850;margin-bottom:10px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.metric{padding:14px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.025)}.metric .k{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.7px}.metric .v{font-size:24px;font-weight:900;margin-top:4px}
+input,textarea,select{width:100%;border:1px solid var(--line);background:#0c1118;color:var(--text);border-radius:14px;padding:12px 13px;font-size:16px}textarea{min-height:110px;resize:vertical}label{display:block;font-size:12px;color:var(--muted);margin:10px 0 6px}
+button{cursor:pointer}.primary{width:100%;border:none;border-radius:15px;padding:13px 15px;background:var(--accent);color:#061006;font-weight:900;font-size:15px;margin-top:12px}.secondary{border:1px solid var(--line);background:#111722;color:var(--text);border-radius:13px;padding:10px 12px;font-weight:800}.danger{color:var(--danger)}.ghost{background:transparent;border:1px dashed var(--line);color:var(--muted)}
+.tabs{position:fixed;left:50%;transform:translateX(-50%);bottom:max(12px,env(safe-area-inset-bottom));width:min(95%,830px);display:grid;grid-template-columns:repeat(5,1fr);gap:4px;padding:7px;border:1px solid var(--line);border-radius:18px;background:rgba(15,18,24,.95);backdrop-filter:blur(18px);z-index:20}.tab{border:none;background:transparent;color:var(--muted);padding:8px 2px;border-radius:12px;font-weight:800;font-size:10px}.tab.active{background:#232b37;color:var(--text)}
+.page{display:none}.page.active{display:block}.progress{height:10px;border-radius:999px;background:#0a0d12;border:1px solid var(--line);overflow:hidden}.bar{height:100%;background:var(--accent)}.topic{margin-top:10px;padding:12px;border:1px solid var(--line);border-radius:15px}.topicrow{display:flex;justify-content:space-between;gap:12px;align-items:center}.badge{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:4px 8px;font-size:11px;color:var(--gold)}
+.qcard{padding:16px;border:1px solid var(--line);border-radius:18px;background:#10151d}.qtitle{font-size:18px;font-weight:800;line-height:1.4}.option{display:block;width:100%;text-align:left;margin-top:9px;padding:12px 13px;border-radius:14px;border:1px solid var(--line);background:#111722;color:var(--text);font-size:15px}.option.correct{border-color:#3d7f4b;background:#142219}.option.wrong{border-color:#8a3f46;background:#241519}
+.explain{margin-top:12px;padding:12px;border-left:3px solid var(--info);background:#101722;border-radius:8px;font-size:14px;line-height:1.5}.confidence{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}.confidence button{padding:10px;border-radius:12px;border:1px solid var(--line);background:#111722;color:var(--text);font-weight:700}
+.row{display:flex;gap:8px;flex-wrap:wrap}.row>*{flex:1}.small{font-size:12px;color:var(--muted);line-height:1.45}.empty{text-align:center;color:var(--muted);padding:24px 8px}.listitem{padding:11px 0;border-bottom:1px solid var(--line)}.listitem:last-child{border-bottom:none}
+.callout{border:1px solid #36532d;background:#111b13;border-radius:15px;padding:12px}.toast{position:fixed;top:20px;left:50%;transform:translateX(-50%) translateY(-16px);opacity:0;transition:.2s;background:#142218;border:1px solid #2f6f3b;color:#ddffd9;padding:10px 14px;border-radius:999px;z-index:40;font-weight:800}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.planitem{padding:12px;border:1px solid var(--line);border-radius:14px;margin-top:9px}.due{color:var(--gold);font-size:11px}
+@media(max-width:650px){.grid3{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr}.tabs{grid-template-columns:repeat(5,1fr)}.tab{font-size:9px}.confidence{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -58,229 +44,166 @@ button{cursor:pointer}.primary{width:100%;border:none;border-radius:15px;padding
         <div class="metric"><div class="k">Accuracy</div><div class="v" id="accuracy">—</div></div>
       </div>
     </div>
-    <div class="card">
-      <div class="section">Weak areas</div>
-      <div id="weakAreas"></div>
-    </div>
+    <div class="card"><div class="section">Weak areas</div><div id="weakAreas"></div></div>
+    <div class="card"><div class="section">Due for review</div><div id="reviewQueue"></div></div>
     <div class="card">
       <div class="section">Quick start</div>
-      <div class="row">
-        <button class="secondary" onclick="startPractice('adaptive')">Adaptive practice</button>
-        <button class="secondary" onclick="startPractice('cram')">Cram mode</button>
-      </div>
+      <div class="row"><button class="secondary" onclick="startPractice('adaptive')">Adaptive practice</button><button class="secondary" onclick="startPractice('cram')">Cram weakest topics</button></div>
     </div>
   </section>
 
   <section id="practice" class="page">
     <div class="card">
       <div class="section">Practice</div>
-      <div class="row">
-        <select id="practiceMode">
-          <option value="adaptive">Adaptive</option>
-          <option value="random">Random</option>
-          <option value="cram">Weakest topics</option>
-        </select>
-        <button class="secondary" onclick="startPractice(document.getElementById('practiceMode').value)">Start / Next</button>
-      </div>
+      <div class="row"><select id="practiceMode"><option value="adaptive">Adaptive</option><option value="spaced">Due reviews</option><option value="random">Random</option><option value="cram">Weakest topics</option></select><button class="secondary" onclick="startPractice(document.getElementById('practiceMode').value)">Start / Next</button></div>
     </div>
-    <div class="card" id="practiceCard"><div class="empty">Add or import questions, then start practice.</div></div>
+    <div class="card" id="practiceCard"><div class="empty">Add questions or use AI Study Builder.</div></div>
+  </section>
+
+  <section id="cram" class="page">
+    <div class="card">
+      <div class="section">🚨 OA Tomorrow</div>
+      <div class="small">Tell the coach when your assessment is. It builds a prioritized study plan from your topic mastery and review history.</div>
+      <label>Assessment date/time</label><input id="examAt" type="datetime-local"/>
+      <button class="primary" onclick="buildCramPlan()">Build cram plan</button>
+    </div>
+    <div class="card"><div class="section">Study plan</div><div id="cramPlan"></div></div>
   </section>
 
   <section id="bank" class="page">
     <div class="card">
-      <div class="section">Add question</div>
-      <label>Question</label><textarea id="newQuestion" placeholder="What is the main purpose of...?"></textarea>
-      <label>Topic</label><input id="newTopic" placeholder="Medicare / Data Governance / etc."/>
-      <div class="grid">
-        <div><label>Choice A</label><input id="a"/></div>
-        <div><label>Choice B</label><input id="b"/></div>
-        <div><label>Choice C</label><input id="c"/></div>
-        <div><label>Choice D</label><input id="d"/></div>
-      </div>
-      <label>Correct answer</label>
-      <select id="correct"><option>A</option><option>B</option><option>C</option><option>D</option></select>
-      <label>Explanation</label><textarea id="explanation" placeholder="Why the correct answer is right..."></textarea>
-      <button class="primary" onclick="addQuestion()">Add to question bank</button>
+      <div class="section">Add question manually</div>
+      <label>Question</label><textarea id="newQuestion"></textarea><label>Topic</label><input id="newTopic"/>
+      <div class="grid"><div><label>Choice A</label><input id="a"/></div><div><label>Choice B</label><input id="b"/></div><div><label>Choice C</label><input id="c"/></div><div><label>Choice D</label><input id="d"/></div></div>
+      <label>Correct answer</label><select id="correct"><option>A</option><option>B</option><option>C</option><option>D</option></select><label>Explanation</label><textarea id="explanation"></textarea>
+      <button class="primary" onclick="addQuestion()">Add question</button>
     </div>
-    <div class="card">
-      <div class="section">Question bank</div>
-      <div id="questionList"></div>
-    </div>
+    <div class="card"><div class="section">Question bank</div><div id="questionList"></div></div>
   </section>
 
-  <section id="packs" class="page">
+  <section id="more" class="page">
     <div class="card">
-      <div class="section">Course setup</div>
-      <label>Course name</label><input id="courseName" placeholder="Healthcare Ecosystems"/>
-      <label>Course code (optional)</label><input id="courseCode" placeholder="D123"/>
-      <button class="primary" onclick="saveCourse()">Save course</button>
+      <div class="section">Course setup</div><label>Course name</label><input id="courseName" placeholder="Healthcare Ecosystems"/><label>Course code</label><input id="courseCode" placeholder="D123"/><button class="primary" onclick="saveCourse()">Save course</button>
     </div>
     <div class="card">
-      <div class="section">Import / export course pack</div>
-      <div class="small">Course packs contain only the questions and explanations you add. This makes it easy to share community-made study sets without bundling private course material into the app itself.</div>
-      <button class="secondary" style="width:100%;margin-top:12px" onclick="exportPack()">Export pack</button>
-      <label>Import JSON pack</label>
-      <textarea id="importBox" placeholder='Paste exported JSON here'></textarea>
-      <button class="primary" onclick="importPack()">Import pack</button>
+      <div class="section">AI connection</div>
+      <div class="small">For safety, your OpenAI API key should never be placed in this public GitHub Pages app. Connect this app to the included Worker backend instead.</div>
+      <label>AI endpoint</label><input id="aiEndpoint" placeholder="https://your-worker.workers.dev/ai"/><button class="primary" onclick="saveAI()">Save AI endpoint</button><button class="secondary" style="width:100%;margin-top:8px" onclick="testAI()">Test AI connection</button>
     </div>
     <div class="card">
-      <div class="section">Demo pack</div>
-      <div class="small">Load a tiny generic demo to test the app. It is not WGU course content.</div>
-      <button class="secondary" style="width:100%;margin-top:12px" onclick="loadDemo()">Load demo questions</button>
+      <div class="section">Community course packs</div><div class="small">This free version does not require AI or an API key.</div><div class="small">Export original practice questions as a JSON pack and share them. Do not share recalled OA questions or protected WGU material.</div>
+      <button class="secondary" style="width:100%;margin-top:10px" onclick="exportPack()">Export pack</button><label>Import JSON pack</label><textarea id="importBox"></textarea><button class="primary" onclick="importPack()">Import pack</button>
     </div>
-  </section>
-
-  <section id="settings" class="page">
-    <div class="card">
-      <div class="section">Study stats</div>
-      <div id="studyStats" class="small"></div>
-    </div>
-    <div class="card">
-      <div class="section">Reset</div>
-      <button class="secondary danger" style="width:100%" onclick="resetAll()">Reset all local data</button>
-    </div>
-    <div class="card">
-      <div class="section">Install on iPhone</div>
-      <div class="small">Open this site in Safari → Share → Add to Home Screen.</div>
-    </div>
+    <div class="card"><div class="section">Demo</div><button class="secondary" style="width:100%" onclick="loadDemo()">Load generic demo pack</button></div>
+    <div class="card"><div class="section">Stats & reset</div><div id="studyStats" class="small"></div><button class="secondary danger" style="width:100%;margin-top:12px" onclick="resetAll()">Reset local study data</button></div>
   </section>
 </div>
 
 <nav class="tabs">
-  <button class="tab active" data-page="dashboard">📊<br>Home</button>
-  <button class="tab" data-page="practice">🧠<br>Practice</button>
-  <button class="tab" data-page="bank">🗂️<br>Bank</button>
-  <button class="tab" data-page="packs">📦<br>Packs</button>
-  <button class="tab" data-page="settings">⚙️<br>More</button>
+<button class="tab active" data-page="dashboard">📊<br>Home</button>
+<button class="tab" data-page="practice">🧠<br>Practice</button>
+<button class="tab" data-page="cram">🚨<br>Cram</button>
+<button class="tab" data-page="bank">🗂️<br>Bank</button>
+<button class="tab" data-page="more">⚙️<br>More</button>
 </nav>
 
 <script>
-const KEY="wgu_oa_coach_state_v1";
-const defaultState={course:{name:"",code:""},questions:[],attempts:[],current:null};
+const KEY="wgu_oa_coach_ai_v2";
+const defaultState={course:{name:"",code:""},questions:[],attempts:[],current:null,examAt:""};
 let state=load();
-
 function load(){try{return {...defaultState,...JSON.parse(localStorage.getItem(KEY)||"{}")}}catch(e){return structuredClone(defaultState)}}
 function save(){localStorage.setItem(KEY,JSON.stringify(state));render()}
-function toast(t){const el=document.getElementById("toast");el.textContent=t;el.classList.add("show");setTimeout(()=>el.classList.remove("show"),1600)}
+function toast(t){const e=document.getElementById("toast");e.textContent=t;e.classList.add("show");setTimeout(()=>e.classList.remove("show"),1800)}
 function esc(s){return String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]))}
-
-function saveCourse(){state.course.name=document.getElementById("courseName").value.trim();state.course.code=document.getElementById("courseCode").value.trim();save();toast("Course saved")}
-function addQuestion(){
-  const q=document.getElementById("newQuestion").value.trim(),topic=document.getElementById("newTopic").value.trim()||"General";
-  const choices=[a.value.trim(),b.value.trim(),c.value.trim(),d.value.trim()];
-  if(!q||choices.some(x=>!x))return toast("Fill in the question and all 4 choices");
-  const correct=document.getElementById("correct").value;
-  const explanation=document.getElementById("explanation").value.trim();
-  state.questions.push({id:Date.now(),q,topic,choices,correct,explanation});
-  ["newQuestion","newTopic","a","b","c","d","explanation"].forEach(id=>document.getElementById(id).value="");
-  save();toast("Question added");
+function now(){return Date.now()}
+function saveCourse(){state.course.name=courseName.value.trim();state.course.code=courseCode.value.trim();save();toast("Course saved")}
+);toast(x.message||"AI connected")}catch(e){alert(e.message)}}
+function addQuestionObject(q){
+  const letters=["A","B","C","D"];
+  if(!q.question||!Array.isArray(q.choices)||q.choices.length!==4||!letters.includes(q.correct))return false;
+  state.questions.push({id:Date.now()+Math.floor(Math.random()*100000),q:q.question,topic:q.topic||"General",choices:q.choices,correct:q.correct,explanation:q.explanation||"",difficulty:q.difficulty||"mixed",nextReview:0,interval:0,ease:2.3});
+  return true;
 }
+function addQuestion(){const choices=[a.value.trim(),b.value.trim(),c.value.trim(),d.value.trim()];if(!newQuestion.value.trim()||choices.some(x=>!x))return toast("Fill in the question and all four choices");addQuestionObject({question:newQuestion.value.trim(),topic:newTopic.value.trim()||"General",choices,correct:correct.value,explanation:explanation.value.trim()});["newQuestion","newTopic","a","b","c","d","explanation"].forEach(id=>document.getElementById(id).value="");save();toast("Question added")}
 function deleteQuestion(id){state.questions=state.questions.filter(q=>q.id!==id);save()}
-function topicStats(){
-  const map={};
-  state.questions.forEach(q=>{map[q.topic]??={total:0,seen:0,correct:0};map[q.topic].total++});
-  state.attempts.forEach(a=>{map[a.topic]??={total:0,seen:0,correct:0};map[a.topic].seen++;if(a.correct)map[a.topic].correct++});
-  return map;
-}
-function topicMastery(topic){
-  const s=topicStats()[topic]||{total:0,seen:0,correct:0};
-  if(!s.seen)return 0;
-  const accuracy=s.correct/s.seen;
-  const coverage=Math.min(1,s.seen/Math.max(1,s.total));
-  return Math.round((accuracy*.75+coverage*.25)*100);
-}
-function readiness(){
-  if(!state.questions.length)return 0;
-  const topics=[...new Set(state.questions.map(q=>q.topic))];
-  if(!topics.length)return 0;
-  return Math.round(topics.reduce((sum,t)=>sum+topicMastery(t),0)/topics.length);
-}
-function accuracy(){
-  if(!state.attempts.length)return null;
-  return Math.round(state.attempts.filter(a=>a.correct).length/state.attempts.length*100);
-}
+function topicStats(){const m={};state.questions.forEach(q=>m[q.topic]??={total:0,seen:0,correct:0,conf:0});state.questions.forEach(q=>m[q.topic].total++);state.attempts.forEach(a=>{m[a.topic]??={total:0,seen:0,correct:0,conf:0};m[a.topic].seen++;if(a.correct)m[a.topic].correct++;m[a.topic].conf+=(a.confidence||0)});return m}
+function topicMastery(t){const s=topicStats()[t]||{total:0,seen:0,correct:0,conf:0};if(!s.seen)return 0;const accuracy=s.correct/s.seen,coverage=Math.min(1,s.seen/Math.max(1,s.total)),confidence=Math.min(1,(s.conf/Math.max(1,s.seen))/3);return Math.round((accuracy*.60+coverage*.20+confidence*.20)*100)}
+function readiness(){if(!state.questions.length)return 0;const ts=[...new Set(state.questions.map(q=>q.topic))];return Math.round(ts.reduce((n,t)=>n+topicMastery(t),0)/ts.length)}
+function accuracy(){if(!state.attempts.length)return null;return Math.round(state.attempts.filter(a=>a.correct).length/state.attempts.length*100)}
+function dueQuestions(){return state.questions.filter(q=>(q.nextReview||0)<=now()).sort((a,b)=>(a.nextReview||0)-(b.nextReview||0))}
 function chooseQuestion(mode){
-  if(!state.questions.length)return null;
-  const qs=[...state.questions];
+  if(!state.questions.length)return null;let qs=[...state.questions];
+  if(mode==="spaced"){const d=dueQuestions();if(d.length)qs=d}
   if(mode==="random")return qs[Math.floor(Math.random()*qs.length)];
-  if(mode==="cram"){
-    qs.sort((x,y)=>topicMastery(x.topic)-topicMastery(y.topic));
-    const pool=qs.slice(0,Math.max(1,Math.ceil(qs.length*.4)));
-    return pool[Math.floor(Math.random()*pool.length)];
-  }
-  // adaptive: unseen first, then lower mastery with slight randomness
+  if(mode==="cram"){qs.sort((x,y)=>topicMastery(x.topic)-topicMastery(y.topic));qs=qs.slice(0,Math.max(1,Math.ceil(qs.length*.45)));return qs[Math.floor(Math.random()*qs.length)]}
   const attemptsByQ=Object.fromEntries(state.questions.map(q=>[q.id,state.attempts.filter(a=>a.qid===q.id).length]));
-  qs.sort((x,y)=>{
-    const ux=attemptsByQ[x.id]===0? -50:0, uy=attemptsByQ[y.id]===0? -50:0;
-    return (topicMastery(x.topic)+ux+Math.random()*12)-(topicMastery(y.topic)+uy+Math.random()*12);
-  });
-  return qs[0];
+  qs.sort((x,y)=>{const ux=attemptsByQ[x.id]===0?-45:0,uy=attemptsByQ[y.id]===0?-45:0;const dx=(x.nextReview||0)<=now()?-15:0,dy=(y.nextReview||0)<=now()?-15:0;return(topicMastery(x.topic)+ux+dx+Math.random()*10)-(topicMastery(y.topic)+uy+dy+Math.random()*10)});
+  return qs[0]
 }
-function startPractice(mode="adaptive"){
-  state.current={qid:chooseQuestion(mode)?.id||null,answered:false,selected:null,mode};
-  save();showPage("practice");
-}
-function answer(letter){
-  if(!state.current||state.current.answered)return;
+function startPractice(mode="adaptive"){const q=chooseQuestion(mode);state.current={qid:q?.id||null,answered:false,selected:null,mode,pendingConfidence:false};save();showPage("practice")}
+function answer(letter){if(!state.current||state.current.answered)return;const q=state.questions.find(x=>x.id===state.current.qid);if(!q)return;state.current.answered=true;state.current.selected=letter;state.current.pendingConfidence=true;save()}
+function dontKnow(){if(!state.current||state.current.answered)return;state.current.answered=true;state.current.selected="IDK";state.current.pendingConfidence=false;recordAttempt(0);save()}
+function recordAttempt(confidence){
   const q=state.questions.find(x=>x.id===state.current.qid);if(!q)return;
-  const ok=letter===q.correct;
-  state.current.answered=true;state.current.selected=letter;
-  state.attempts.push({qid:q.id,topic:q.topic,correct:ok,at:Date.now()});
-  save();
+  const correctAns=state.current.selected===q.correct;
+  const effectiveCorrect=correctAns && confidence>1;
+  state.attempts.push({qid:q.id,topic:q.topic,correct:correctAns,confidence,selected:state.current.selected,at:now()});
+  // simplified spaced repetition
+  let interval=q.interval||0;
+  if(!effectiveCorrect){interval=1;q.ease=Math.max(1.3,(q.ease||2.3)-.2)}
+  else if(confidence===2){interval=Math.max(2,interval?Math.round(interval*1.6):2)}
+  else {interval=Math.max(3,interval?Math.round(interval*(q.ease||2.3)):3);q.ease=Math.min(3,(q.ease||2.3)+.05)}
+  q.interval=interval;q.nextReview=now()+interval*86400000;
+  state.current.pendingConfidence=false;
 }
+function setConfidence(v){if(!state.current?.pendingConfidence)return;recordAttempt(v);save()}
 function nextQuestion(){startPractice(state.current?.mode||"adaptive")}
 
-function exportPack(){
-  const pack={format:"wgu-oa-coach-pack-v1",course:state.course,questions:state.questions.map(({id,...q})=>q)};
-  const blob=new Blob([JSON.stringify(pack,null,2)],{type:"application/json"});
-  const url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download=(state.course.code||state.course.name||"wgu-course-pack").replace(/\s+/g,"-").toLowerCase()+".json";a.click();URL.revokeObjectURL(url);
-}
-function importPack(){
-  try{
-    const pack=JSON.parse(document.getElementById("importBox").value);
-    if(!Array.isArray(pack.questions))throw new Error();
-    state.course=pack.course||state.course;
-    state.questions=pack.questions.map((q,i)=>({...q,id:Date.now()+i}));
-    state.attempts=[];state.current=null;document.getElementById("importBox").value="";save();toast("Pack imported");
-  }catch(e){toast("That doesn't look like a valid course pack")}
-}
-function loadDemo(){
-  state.course={name:"Demo Course",code:"DEMO"};
-  state.questions=[
-    {id:1,q:"Which study method most directly checks whether you can recall information without looking at your notes?",topic:"Study Skills",choices:["Passive rereading","Active recall","Highlighting","Reformatting notes"],correct:"B",explanation:"Active recall requires you to retrieve information from memory, which directly tests whether you can remember it."},
-    {id:2,q:"If you repeatedly miss questions from one topic, what should an adaptive study system do?",topic:"Study Skills",choices:["Show fewer of them","Ignore the pattern","Increase practice on that topic","Reset your score"],correct:"C",explanation:"Adaptive practice should increase exposure to weak areas until performance improves."},
-    {id:3,q:"What is the best reason to review an explanation after answering a practice question?",topic:"Test Prep",choices:["To memorize the letter choice","To understand why the answer is correct","To make the session longer","To avoid future practice"],correct:"B",explanation:"Understanding the reasoning helps transfer knowledge to differently worded questions."},
-    {id:4,q:"A readiness score should be based on more than raw accuracy because:",topic:"Test Prep",choices:["Accuracy never matters","You also need topic coverage","Scores should be random","Only study time matters"],correct:"B",explanation:"High accuracy on a tiny portion of the material can be misleading, so coverage should matter too."}
-  ];
-  state.attempts=[];state.current=null;save();toast("Demo loaded");
-}
-function resetAll(){if(confirm("Reset all local OA Coach data?")){state=structuredClone(defaultState);localStorage.removeItem(KEY);render()}}
 
-function render(){
-  document.getElementById("courseBadge").textContent=state.course.name?(state.course.code?state.course.code+" • ":"")+state.course.name:"No course";
-  document.getElementById("readiness").textContent=readiness()+"%";
-  document.getElementById("qCount").textContent=state.questions.length;
-  const acc=accuracy();document.getElementById("accuracy").textContent=acc===null?"—":acc+"%";
-  document.getElementById("courseName").value=state.course.name||"";document.getElementById("courseCode").value=state.course.code||"";
-  const stats=topicStats();
-  const topics=Object.keys(stats).sort((a,b)=>topicMastery(a)-topicMastery(b));
-  document.getElementById("weakAreas").innerHTML=topics.length?topics.map(t=>`<div class="topic"><div class="topicrow"><div><b>${esc(t)}</b><div class="small">${stats[t].seen} attempts • ${stats[t].correct} correct</div></div><div><b>${topicMastery(t)}%</b></div></div><div class="progress" style="margin-top:8px"><div class="bar" style="width:${topicMastery(t)}%"></div></div></div>`).join(""):'<div class="empty">Your weak areas will appear after you add questions and start practicing.</div>';
-  document.getElementById("questionList").innerHTML=state.questions.length?state.questions.map(q=>`<div class="listitem"><b>${esc(q.topic)}</b><div style="margin-top:4px">${esc(q.q)}</div><button class="secondary danger" style="margin-top:8px" onclick="deleteQuestion(${q.id})">Delete</button></div>`).join(""):'<div class="empty">No questions yet.</div>';
-  renderPractice();
-  document.getElementById("studyStats").innerHTML=`${state.attempts.length} total attempts • ${acc===null?"No accuracy yet":acc+"% accuracy"} • ${Object.keys(stats).length} topics • ${readiness()}% estimated readiness`;
+function buildCramPlan(){
+  state.examAt=examAt.value;if(!state.examAt)return toast("Choose your OA date/time");
+  const exam=new Date(state.examAt).getTime(),hours=Math.max(0,Math.round((exam-now())/3600000));
+  const ts=Object.keys(topicStats()).sort((a,b)=>topicMastery(a)-topicMastery(b));
+  const slots=Math.max(1,Math.min(6,Math.ceil(hours/3)));
+  const focus=ts.slice(0,Math.min(slots,ts.length));
+  cramPlan.innerHTML=`<div class="callout"><b>${hours} hours until assessment</b><div class="small" style="margin-top:5px">Estimated readiness: ${readiness()}%. Spend most of your time on the lowest-mastered topics, then finish with mixed retrieval practice.</div></div>`+focus.map((t,i)=>`<div class="planitem"><b>${i+1}. ${esc(t)}</b><div class="small">${topicMastery(t)}% mastery • Do 10–15 focused questions, review explanations, then retest without notes.</div></div>`).join("")+`<div class="planitem"><b>Final review</b><div class="small">Do one mixed adaptive set. Stop heavy studying close to the assessment and prioritize sleep, food, and a calm setup.</div></div>`;
+  save()
 }
+function exportPack(){const pack={format:"wgu-oa-coach-pack-v2",course:state.course,questions:state.questions.map(({id,nextReview,interval,ease,...q})=>q)};const blob=new Blob([JSON.stringify(pack,null,2)],{type:"application/json"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download=(state.course.code||state.course.name||"course-pack").replace(/\s+/g,"-").toLowerCase()+".json";a.click();URL.revokeObjectURL(url)}
+function importPack(){try{const p=JSON.parse(importBox.value);if(!Array.isArray(p.questions))throw 0;state.course=p.course||state.course;state.questions=[];p.questions.forEach(addQuestionObject);state.attempts=[];state.current=null;importBox.value="";save();toast("Pack imported")}catch(e){toast("Invalid course pack")}}
+function loadDemo(){state.course={name:"Demo Study Skills",code:"DEMO"};state.questions=[];[
+{question:"Which method directly tests whether you can retrieve information from memory?",topic:"Study Skills",choices:["Passive rereading","Active recall","Highlighting","Reformatting notes"],correct:"B",explanation:"Active recall makes you retrieve the answer without looking, which tests memory more directly."},
+{question:"Why should an adaptive study system increase practice in a weak topic?",topic:"Adaptive Learning",choices:["To punish mistakes","To target knowledge gaps","To lower confidence","To avoid other material"],correct:"B",explanation:"Adaptive systems allocate more practice to areas where performance indicates a knowledge gap."},
+{question:"Why is a correct guess weaker evidence of mastery than a confident correct answer?",topic:"Assessment Strategy",choices:["Guessing is always wrong","It may not reflect stable knowledge","Confidence guarantees truth","Scores ignore answers"],correct:"B",explanation:"A lucky guess can produce a correct result without demonstrating reliable recall."},
+{question:"What is the main benefit of spaced repetition?",topic:"Memory",choices:["It removes hard topics","It reviews information near the point of forgetting","It uses only easy questions","It avoids testing"],correct:"B",explanation:"Spacing reviews over time strengthens durable retrieval more effectively than massed repetition."}
+].forEach(addQuestionObject);state.attempts=[];state.current=null;save();toast("Demo loaded")}
+function resetAll(){if(confirm("Reset all local OA Coach study data?")){state=structuredClone(defaultState);localStorage.setItem(KEY,JSON.stringify(state));render()}}
 function renderPractice(){
-  const box=document.getElementById("practiceCard");
-  if(!state.current?.qid){box.innerHTML='<div class="empty">Add or import questions, then start practice.</div>';return}
-  const q=state.questions.find(x=>x.id===state.current.qid);if(!q){box.innerHTML='<div class="empty">Question not found.</div>';return}
-  const letters=["A","B","C","D"];
-  box.innerHTML=`<div class="qcard"><div class="badge">${esc(q.topic)}</div><div class="qtitle" style="margin-top:10px">${esc(q.q)}</div>${q.choices.map((c,i)=>{const L=letters[i];let cls="option";if(state.current.answered){if(L===q.correct)cls+=" correct";else if(L===state.current.selected)cls+=" wrong"}return `<button class="${cls}" ${state.current.answered?"disabled":""} onclick="answer('${L}')"><b>${L}.</b> ${esc(c)}</button>`}).join("")}${state.current.answered?`<div class="explain"><b>${state.current.selected===q.correct?"Correct":"Not quite"}.</b> ${esc(q.explanation||"Review the correct answer and make sure you understand why it is right.")}</div><button class="primary" onclick="nextQuestion()">Next question</button>`:""}</div>`;
+ const box=practiceCard;if(!state.current?.qid){box.innerHTML='<div class="empty">Add questions or use the AI Study Builder, then start practice.</div>';return}
+ const q=state.questions.find(x=>x.id===state.current.qid);if(!q){box.innerHTML='<div class="empty">Question not found.</div>';return}
+ const letters=["A","B","C","D"];let html=`<div class="qcard"><div class="badge">${esc(q.topic)}</div><div class="qtitle" style="margin-top:10px">${esc(q.q)}</div>`;
+ html+=q.choices.map((c,i)=>{const L=letters[i];let cls="option";if(state.current.answered){if(L===q.correct)cls+=" correct";else if(L===state.current.selected)cls+=" wrong"}return `<button class="${cls}" ${state.current.answered?"disabled":""} onclick="answer('${L}')"><b>${L}.</b> ${esc(c)}</button>`}).join("");
+ if(!state.current.answered)html+=`<button class="option ghost" onclick="dontKnow()">🤷 I don't know</button>`;
+ if(state.current.answered){
+   const idk=state.current.selected==="IDK",right=state.current.selected===q.correct;
+   html+=`<div class="explain"><b>${idk?"Good call saying you didn't know.":right?"Correct.":"Not quite."}</b> ${esc(q.explanation||"Review why the correct answer is right.")}</div>`;
+   if(state.current.pendingConfidence)html+=`<div class="small" style="margin-top:12px">How sure were you?</div><div class="confidence"><button onclick="setConfidence(1)">🎲 Guessed</button><button onclick="setConfidence(2)">🤔 Kinda knew</button><button onclick="setConfidence(3)">✅ Definitely knew</button></div>`;
+   else html+=`<button class="primary" onclick="nextQuestion()">Next question</button>`;
+ }
+ box.innerHTML=html+`</div>`;
 }
-function showPage(id){
-  document.querySelectorAll(".page").forEach(x=>x.classList.remove("active"));
-  document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("active",x.dataset.page===id));
-  document.getElementById(id).classList.add("active");window.scrollTo({top:0,behavior:"smooth"});
+function render(){
+ courseBadge.textContent=state.course.name?(state.course.code?state.course.code+" • ":"")+state.course.name:"No course";readinessEl=document.getElementById("readiness");readinessEl.textContent=readiness()+"%";qCount.textContent=state.questions.length;const acc=accuracy();accuracyEl=document.getElementById("accuracy");accuracyEl.textContent=acc===null?"—":acc+"%";
+ courseName.value=state.course.name||"";courseCode.value=state.course.code||"";examAt.value=state.examAt||"";
+ const stats=topicStats(),topics=Object.keys(stats).sort((a,b)=>topicMastery(a)-topicMastery(b));
+ weakAreas.innerHTML=topics.length?topics.map(t=>`<div class="topic"><div class="topicrow"><div><b>${esc(t)}</b><div class="small">${stats[t].seen} attempts • ${stats[t].correct} correct</div></div><b>${topicMastery(t)}%</b></div><div class="progress" style="margin-top:8px"><div class="bar" style="width:${topicMastery(t)}%"></div></div></div>`).join(""):'<div class="empty">Weak areas appear after you practice.</div>';
+ const due=dueQuestions();reviewQueue.innerHTML=due.length?due.slice(0,8).map(q=>`<div class="listitem"><b>${esc(q.topic)}</b><div>${esc(q.q)}</div><div class="due">Due now</div></div>`).join(""):'<div class="empty">Nothing due right now.</div>';
+ mistakeTopic.innerHTML=topics.map(t=>`<option>${esc(t)}</option>`).join("");
+ questionList.innerHTML=state.questions.length?state.questions.map(q=>`<div class="listitem"><b>${esc(q.topic)}</b><div style="margin-top:4px">${esc(q.q)}</div><button class="secondary danger" style="margin-top:8px" onclick="deleteQuestion(${q.id})">Delete</button></div>`).join(""):'<div class="empty">No questions yet.</div>';
+ studyStats.innerHTML=`${state.attempts.length} attempts • ${acc===null?"No accuracy yet":acc+"% accuracy"} • ${topics.length} topics • ${readiness()}% estimated readiness • ${due.length} due reviews`;
+ renderPractice()
 }
+function showPage(id){document.querySelectorAll(".page").forEach(x=>x.classList.remove("active"));document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("active",x.dataset.page===id));document.getElementById(id).classList.add("active");window.scrollTo({top:0,behavior:"smooth"})}
 document.querySelectorAll(".tab").forEach(b=>b.addEventListener("click",()=>showPage(b.dataset.page)));
 if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js").catch(()=>{})}
 render();
