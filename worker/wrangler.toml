@@ -1,0 +1,6 @@
+name = "wgu-oa-coach-ai"
+main = "worker.js"
+compatibility_date = "2026-08-01"
+
+[vars]
+OPENAI_MODEL = "gpt-5-mini"
